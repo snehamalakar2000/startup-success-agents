@@ -49,6 +49,13 @@ Stop everything: `make down-mac`
 | **Crunchbase** open snapshot: `companies.csv` (66K) + `rounds.csv` (115K) | [github.com/notpeter/crunchbase-data](https://github.com/notpeter/crunchbase-data) | Startup category, country, first round type and size, outcome (acquired / IPO / closed / operating) |
 | **FRED** macro series: `FEDFUNDS`, `NASDAQCOM` | [fred.stlouisfed.org](https://fred.stlouisfed.org) | Fed Funds rate and NASDAQ 12-month return in the month of first funding |
 
+**Why NASDAQ instead of the S&P 500?**
+- **Matches the startups:** Crunchbase startups are mostly tech (software, mobile, web, biotech). NASDAQ is tech-heavy; the S&P 500 reflects the broad economy (banks, energy, retail).
+- **Where exits happen:** most venture-backed tech IPOs list on the NASDAQ exchange, so a strong NASDAQ signals an open IPO window.
+- **Drives acquisitions:** the typical acquirers of startups are large NASDAQ-listed tech companies; higher valuations give them more capacity to buy.
+- **Covers the dot-com crash:** the 2000–2002 crash hit tech far harder than the broad market, so NASDAQ captures the funding climate startups actually faced.
+- **Data availability:** FRED's NASDAQ Composite (`NASDAQCOM`) goes back to 1971, while its S&P 500 series (`SP500`) only covers roughly the last 10 years, which is too short for 1999–2011 funding dates.
+
 ### Pipeline structure
 
 DAG: [`pipeline/dags/startup_success_pipeline.py`](pipeline/dags/startup_success_pipeline.py). Transforms: [`pipeline/transforms.py`](pipeline/transforms.py).
