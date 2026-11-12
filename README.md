@@ -56,6 +56,8 @@ Stop everything: `make down-mac`
 - **Covers the dot-com crash:** the 2000–2002 crash hit tech far harder than the broad market, so NASDAQ captures the funding climate startups actually faced.
 - **Data availability:** FRED's NASDAQ Composite (`NASDAQCOM`) goes back to 1971, while its S&P 500 series (`SP500`) only covers roughly the last 10 years, which is too short for 1999–2011 funding dates.
 
+![Industry mix of the 28,012 startups](docs/category_mix.png)
+
 ### Pipeline structure
 
 DAG: [`pipeline/dags/startup_success_pipeline.py`](pipeline/dags/startup_success_pipeline.py). Transforms: [`pipeline/transforms.py`](pipeline/transforms.py).
