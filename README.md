@@ -102,7 +102,7 @@ Both analysis tasks read the cleaned data **from Postgres**.
   - Accuracy is misleading at a 20% base rate: always predicting "fail" scores 80% but finds zero winners. **ROC-AUC** (ranking quality) is the right metric here.
 - **Findings (EDA chart):**
   - Exit rates fall for later cohorts (42% in 2002 → 10% in 2011). Younger companies have had less time to exit, so `funding_year` is kept as a control.
-  - Startups first funded when rates were **near zero (<0.5%)** exited **less** often (~13% vs. 26–32%), consistent with easy money funding weaker companies.
+ - Startups first funded when rates were **near zero (<0.5%)** exited **less** often (~13% vs. 26–32%). Caution: near-zero rates occurred mainly in 2009–2011, the youngest cohorts with the least time to exit, so this gap partly reflects time rather than easy money alone; the model includes both `funding_year` and `fed_funds_rate` to separate the two.
  
 ### Limitations
 
