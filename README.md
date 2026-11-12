@@ -103,6 +103,10 @@ Both analysis tasks read the cleaned data **from Postgres**.
 - **Findings (EDA chart):**
   - Exit rates fall for later cohorts (42% in 2002 → 10% in 2011). Younger companies have had less time to exit, so `funding_year` is kept as a control.
   - Startups first funded when rates were **near zero (<0.5%)** exited **less** often (~13% vs. 26–32%), consistent with easy money funding weaker companies.
+ 
+### Limitations
+
+- **"First round" means first round recorded in Crunchbase.** Coverage of early funding is incomplete: 17% of startups have their first recorded round 5+ years after founding, which may reflect missing history rather than bootstrapping. Companies first recorded after their IPO (0.1%) were removed; ~87% of the remaining first rounds are seed, angel or venture, so the sample is predominantly early-stage.
 
 ### Screenshots
 
