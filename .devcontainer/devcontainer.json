@@ -1,0 +1,19 @@
+{
+  "name": "startup-success-agents",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" }
+  },
+  "postCreateCommand": "pip install -e \".[dev]\" && cd frontend && npm install",
+  "forwardPorts": [8088, 5173, 8000, 5433],
+  "portsAttributes": {
+    "8088": { "label": "Airflow" },
+    "5173": { "label": "Agent UI" },
+    "8000": { "label": "Gateway" },
+    "5433": { "label": "Warehouse Postgres" }
+  },
+  "customizations": {
+    "vscode": { "extensions": ["ms-python.python", "ms-azuretools.vscode-docker"] }
+  }
+}
