@@ -192,4 +192,4 @@ docs/screenshots/                    # submission screenshots
 
 ## Credits
 
-Infrastructure (Docker services, agent UI, base LangGraph loop) adapted from the course template [Kedar-V/automl-research-lab](https://github.com/Kedar-V/automl-research-lab) (see `TEMPLATE_README.md`). The pipeline, datasets, Feature Engineer agent and analysis are original to this project.
+Docker services, agent UI and the base LangGraph loop are adapted from the course template [Kedar-V/automl-research-lab](https://github.com/Kedar-V/automl-research-lab). The Airflow pipeline, datasets, Feature Engineer agent and analysis are my own work.
