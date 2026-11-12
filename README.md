@@ -117,7 +117,7 @@ Both analysis tasks read the cleaned data **from Postgres**.
 **TaskGroups expanded (parallel tasks):**
 ![](docs/screenshots/03_airflow_taskgroups_parallel.png)
 
-**Baseline metrics + EDA chart** (EDA screenshot from the first run, before the post-IPO filter was added; current chart: `artifacts/pipeline/eda_exit_rates.png`):
+**Baseline metrics + EDA chart**:
 ![](docs/screenshots/04_airflow_baseline_metrics.png)
 ![](docs/screenshots/05_eda_exit_rates.png)
 
